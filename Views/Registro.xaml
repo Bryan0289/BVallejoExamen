@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BVallejoExamen.Views.Registro"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout
+        Spacing="10" Padding="25">
+        <Label 
+            x:Name="lUser"
+            VerticalOptions="Center" 
+            FontSize="20"
+            
+            HorizontalOptions="End" />
+        <Label Text="REGISTRO"
+               TextColor="Blue"
+               FontSize="22"
+               HorizontalTextAlignment="Center"
+               />
+        <Grid RowDefinitions="*,*,*,*,*"
+              ColumnDefinitions="*,*">
+            <Label Text="Fecha:"
+                   VerticalTextAlignment="Center"
+                   />
+            <Label Text="País:"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="1"
+                   />
+            <Label Text="Ciudad:"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="2"
+                   />
+            <Label Text="Monto Inicial:"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="3"
+                   />
+            <Label Text="Pagos Mensuales:"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="4"
+                   />
+            <DatePicker x:Name="dpFecha"
+                Grid.Column="1"
+                        Format="dd/MM/yyyy"
+                />
+            <Picker x:Name="pkPais"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                >
+                <Picker.Items>
+                    <x:String>Ecuador</x:String>
+                    <x:String>Colombia</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="pkCiudad"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    >
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Bogota</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="txtMontoIni"
+                   Keyboard="Numeric"
+                   TextChanged="txtMontoIni_TextChanged"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   />
+            <Entry x:Name="txtPagos"
+                   IsEnabled="False"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   />
+            
+            
+
+
+        </Grid>
+
+        <Grid RowDefinitions="*,*"
+              ColumnDefinitions="*,*,*"
+              Margin="0,20,0,0">
+            <Label Text="Nombre"
+                   VerticalTextAlignment="Center"
+                   />
+            <Label Text="Apellido"
+                   VerticalOptions="Center"
+                   Grid.Column="1"/>
+            <Label Text="Edad"
+                   VerticalTextAlignment="Center"
+                   Grid.Column="2"/>
+            <Entry x:Name="txtName"
+                   Placeholder="Nombre"
+                   Grid.Row="1"
+                   />
+            <Entry x:Name="txtApelldio"
+       Placeholder="Apellido"
+       Grid.Row="1"
+                   Grid.Column="1"
+       />
+            <Entry x:Name="txtEdad"
+       Placeholder="Edad"
+                   Keyboard="Numeric"
+                   MaxLength="2"
+       Grid.Row="1"
+                   Grid.Column="2"
+       />
+
+        </Grid>
+
+        <Grid ColumnDefinitions="*,*" Margin="0,20,0,0">
+            <Button Text="Calcular"
+                    x:Name="btnCalcular"
+                    Clicked="btnCalcular_Clicked"/>
+            <Button Text="Ver Resumen"
+                    x:Name="btnResumen"
+                    Clicked="btnResumen_Clicked"
+                    Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

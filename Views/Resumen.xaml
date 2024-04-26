@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BVallejoExamen.Views.Resumen"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout 
+        Spacing="10" Padding="25">
+        <Label 
+     x:Name="lUser"
+     VerticalOptions="Center" 
+     FontSize="20"
+     
+     HorizontalOptions="End" />
+        <Label Text="RESUMEN"
+       TextColor="Blue"
+       FontSize="22"
+       HorizontalTextAlignment="Center"
+       />
+        <Grid RowDefinitions="*,*,*,*,*,*,*,*,*"
+              ColumnDefinitions="*,*"
+              Margin="0,20,0,0">
+            <Label Text="Nombre"
+                   VerticalTextAlignment="Center"
+                   />
+            <Label Text="Apellido"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="1"
+                   />
+            <Label Text="Edad"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="2"
+                   />
+            <Label Text="Fecha:"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="3"
+                   />
+            <Label Text="Ciudad:"
+       VerticalTextAlignment="Center"
+       Grid.Row="4"
+       />
+            <Label Text="Pais:"
+       VerticalTextAlignment="Center"
+       Grid.Row="5"
+       />
+            <Label Text="Monto Inicial:"
+       VerticalTextAlignment="Center"
+       Grid.Row="6"
+       />
+            <Label Text="Pago Mensual:"
+       VerticalTextAlignment="Center"
+       Grid.Row="7"
+       />
+            <Label Text="Pago Total:"
+       VerticalTextAlignment="Center"
+       Grid.Row="8"
+       />
+            <Entry x:Name="txtNombre"
+                   IsEnabled="False"
+                   Grid.Column="1"
+                   />
+            <Entry x:Name="txtApellido"
+       IsEnabled="False"
+       Grid.Column="1"
+                   Grid.Row="1"
+       />
+            <Entry x:Name="txtEdad"
+       IsEnabled="False"
+       Grid.Column="1"
+                   Grid.Row="2"
+       />
+            <Entry x:Name="txtFecha"
+IsEnabled="False"
+Grid.Column="1"
+            Grid.Row="3"
+/>
+            <Entry x:Name="txtCiudad"
+IsEnabled="False"
+Grid.Column="1"
+            Grid.Row="4"
+/>
+            <Entry x:Name="txtPais"
+IsEnabled="False"
+Grid.Column="1"
+            Grid.Row="5"
+/>
+            <Entry x:Name="txtMonInic"
+IsEnabled="False"
+Grid.Column="1"
+            Grid.Row="6"
+/>
+            <Entry x:Name="txtPagoMen"
+IsEnabled="False"
+Grid.Column="1"
+            Grid.Row="7"
+/>
+            <Entry x:Name="txtPagTotal"
+IsEnabled="False"
+Grid.Column="1"
+            Grid.Row="8"
+/>
+
+        </Grid>
+        <Button Text="Cerrar sesión"
+                x:Name="btnLogout"
+                Clicked="btnLogout_Clicked"
+                Margin="0,20,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

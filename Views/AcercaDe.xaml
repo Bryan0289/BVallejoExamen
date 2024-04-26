@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BVallejoExamen.Views.AcercaDe"
+             Title="Acerca Del Sistema">
+    <VerticalStackLayout Spacing="30" Padding="15">
+        <Label Text="Acerca del Sistema"
+                           TextTransform="Uppercase"
+                           FontAttributes="Bold"
+                           FontSize="25"
+                           HorizontalTextAlignment="Center"
+                           Grid.ColumnSpan="2"
+                           />
+        <Grid RowDefinitions="*,*,*,*,*"
+              ColumnDefinitions="*,*">
+            <Label Text="Estudiante:"
+                   VerticalTextAlignment="Center"
+                   />
+            <Label Text="Bryan Vallejo"
+                   VerticalTextAlignment="Center"
+                   Grid.Column="1"
+                   />
+            <Label Text="Curso"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="1"
+                   />
+            <Label Text="Séptimo A"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   />
+            <Label Text="Carrera"
+       VerticalTextAlignment="Center"
+       Grid.Row="2"
+       />
+            <Label Text="Informática en línea"
+       Grid.Row="2"
+       Grid.Column="1"
+       />
+            <Label Text="2024"
+                   Grid.Row="3"
+                   Grid.ColumnSpan="2"
+                   HorizontalTextAlignment="Center"
+                   />
+
+            <Button Text="Login"
+                    Margin="0,20,0,0"
+                    x:Name="btnLogin"
+                    Clicked="btnLogin_Clicked"
+                    Grid.Row="4"
+                    />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

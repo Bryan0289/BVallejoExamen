@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BVallejoExamen.Views.Login"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="20" Padding="25" Margin="25">
+            <Label Text="Login"
+                           TextColor="red"
+                           TextTransform="Uppercase"
+                           FontSize="20"
+                           HorizontalTextAlignment="Center"
+                           />
+            <Image Source="logo.png" />
+            <Grid RowDefinitions="*,*,*"
+                  ColumnDefinitions="*,*">
+                <Label Text="Usuario"
+                       VerticalTextAlignment="Center"
+                    />
+                <Label Text="Password"
+                       VerticalTextAlignment="Center"
+                       Grid.Row="1"
+                       />
+                <Entry x:Name="txtUser"
+                       Placeholder="Usuario"
+                       Grid.Column="1"
+                       />
+                <Entry x:Name="txtPassword"
+                       Placeholder="Password"
+                       IsPassword="True"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       />
+                <Button Text="Iniciar sesión"
+                        x:Name="btnLogin"
+                        Grid.Row="2"
+                        Clicked="btnLogin_Clicked"
+                        />
+                <Button Text="Acerca de"
+                        x:Name="btnAcerca"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Clicked="btnAcerca_Clicked"
+                        />
+            </Grid>
+
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
